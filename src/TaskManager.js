@@ -4,6 +4,7 @@ import AddTask from "./AddTask";
 import { useState, useEffect } from "react";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 import { db } from "./firebase";
+import { Link } from "react-router-dom";
 
 function TaskManager() {
   const [openAddModal, setOpenAddModal] = useState(false);
@@ -24,9 +25,14 @@ function TaskManager() {
 
   return (
     <div className="taskManager">
-      <header>Task Manager</header>
+      <header>Boodschappen lijst</header>
       <div className="taskManager__container">
-        <button onClick={() => setOpenAddModal(true)}>Add task +</button>
+        <button
+          className="butten_product_toevoegen"
+          onClick={() => setOpenAddModal(true)}
+        >
+          Product toevoegen +
+        </button>
         <div className="taskManager__tasks">
           {tasks.map((task) => (
             <Task
@@ -39,6 +45,10 @@ function TaskManager() {
           ))}
         </div>
       </div>
+
+      <button className="butten_product_toevoegen">
+        <Link to="/">Log in page</Link>
+      </button>
 
       {openAddModal && (
         <AddTask onClose={() => setOpenAddModal(false)} open={openAddModal} />

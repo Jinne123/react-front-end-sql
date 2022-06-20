@@ -36,7 +36,7 @@ function EditTask({ open, onClose, toEditTitle, toEditDescription, id }) {
           onChange={(e) => setDescription(e.target.value)}
           value={description}
         ></textarea>
-        <button type="submit">Edit</button>
+        <button type="submit">Verander</button>
       </form>
     </Modal>
   );

@@ -61,13 +61,15 @@ function Task({ id, title, description, completed }) {
               className="task__editButton"
               onClick={() => setOpen({ ...open, edit: true })}
             >
-              Edit
+              Bewerken
             </button>
             <button className="task__deleteButton" onClick={handleDelete}>
-              Delete
+              Verwijder
             </button>
           </div>
-          <button onClick={() => setOpen({ ...open, view: true })}>View</button>
+          <button onClick={() => setOpen({ ...open, view: true })}>
+            Meer info
+          </button>
         </div>
       </div>
 

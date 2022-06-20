@@ -32,14 +32,14 @@ function AddTask({ onClose, open }) {
           name="title"
           onChange={(e) => setTitle(e.target.value.toUpperCase())}
           value={title}
-          placeholder="Enter title"
+          placeholder="Vul product naam in"
         />
         <textarea
           onChange={(e) => setDescription(e.target.value)}
-          placeholder="Enter task decription"
+          placeholder="Vul product omschrijving in"
           value={description}
         ></textarea>
-        <button type="submit">Done</button>
+        <button type="submit">Toevoegen</button>
       </form>
     </Modal>
   );
